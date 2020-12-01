@@ -1,2 +1,8 @@
-# helllo-world-
+#UNIVERSIDAD TECNOLÓGICA DE CULIACÁN
+
+
+TECNOLOGÍAS DE LA INFORMACIÓN
+
+STEFAN AUGUSTO MARTINEZ BELLORIN
+
 a page that allows to the public see my works
