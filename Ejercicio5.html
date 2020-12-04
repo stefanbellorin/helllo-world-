@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Precio con 20% de descuento mas IVA 2</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+ 
+function algoritmo()
+{
+    let IVA, cantidad_de_articulos, descuento, precio_con_descuento, precio_del_articulo;
+    let precio_final;
+    cantidad_de_articulos = parseFloat (document.formulario1.cantidad_de_articulos.value);
+    precio_del_articulo = parseFloat (document.formulario1.precio_del_articulo.value);
+    descuento=precio_del_articulo*cantidad_de_articulos*0.2;
+    precio_con_descuento=precio_del_articulo*cantidad_de_articulos-descuento;
+    IVA=precio_con_descuento*0.15;
+    precio_final=precio_con_descuento+IVA;
+    document.formulario1.IVA.value = IVA;
+    document.formulario1.descuento.value = descuento;
+    document.formulario1.precio_con_descuento.value = precio_con_descuento;
+    document.formulario1.precio_final.value = precio_final;
+}
+ 
+        </script>
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="cantidad_de_articulos">Ingrese el valor de cantidad de articulos:</label>
+                        </td>
+                        <td>
+                            <input name="cantidad_de_articulos" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="precio_del_articulo">Ingrese el valor de precio del articulo:</label>
+                        </td>
+                        <td>
+                            <input name="precio_del_articulo" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="IVA">Valor de IVA:</label>
+                        </td>
+                        <td>
+                            <input name="IVA" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="descuento">Valor de descuento:</label>
+                        </td>
+                        <td>
+                            <input name="descuento" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="precio_con_descuento">Valor de precio con descuento:</label>
+                        </td>
+                        <td>
+                            <input name="precio_con_descuento" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="precio_final">Valor de precio final:</label>
+                        </td>
+                        <td>
+                            <input name="precio_final" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

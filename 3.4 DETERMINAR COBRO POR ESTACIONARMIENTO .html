@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>  
+<script>
+alert("este programa determina el total a pagar en un estacionamiento");
+var NH = prompt("ingrese el numero de horas estacionadas");
+var CH;
+if (NH<=2 && NH>=0)
+{
+    CH=5
+    alert("el total a pagar será de;" +NH*CH+"pesos")
+}
+else if (NH>=3 && NH<=5)
+{
+    CH=4
+    var a=NH-2;
+    var total=a*4+10 
+    alert("el total a pagar será de:" +total+"pesos")
+}
+else if (NH>=6 && NH<=10)
+{
+    CH=3
+    var b=NH-5;
+    var total=b*3+22;
+    alert("el total a pagar será de" +total+"pesos")
+}
+else
+{
+    CH=2
+    var c=NH-10;
+    var total=c*2+37
+    alert("el total a pagar será de" +total+"pesos")
+}
+</script>
+</html>

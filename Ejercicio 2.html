@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+ 
+function algoritmo()
+{
+    let cantidad_de_pesos_mexicanos, dolares;
+    cantidad_de_pesos_mexicanos = parseFloat (document.formulario1.cantidad_de_pesos_mexicanos.value);
+    dolares=cantidad_de_pesos_mexicanos/18.7189;
+    document.formulario1.dolares.value = dolares;
+}
+ 
+        </script>
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="cantidad_de_pesos_mexicanos">Ingrese el valor de cantidad de pesos mexicanos:</label>
+                        </td>
+                        <td>
+                            <input name="cantidad_de_pesos_mexicanos" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dolares">Valor de dolares:</label>
+                        </td>
+                        <td>
+                            <input name="dolares" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
